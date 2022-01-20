@@ -12,6 +12,8 @@ import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
 import BoardModerator from "./components/board-moderator.component";
 import BoardAdmin from "./components/board-admin.component";
+import Proba from "./sajatosztalyok/Proba";
+import Autok from "./sajatosztalyok/Autok";
 
 class App extends Component {
   constructor(props) {
@@ -47,13 +49,19 @@ class App extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
-          <Link to={"/"} className="sajatosztaly">
-            bezKoder
+          <Link to={"/Proba"} className="sajatosztaly">
+            Proba
           </Link>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to={"/home"} className="nav-link">
                 Home
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link to={"/Autok"} className="sajatosztalyok">
+                Autok
               </Link>
             </li>
 
@@ -121,6 +129,8 @@ class App extends Component {
             <Route path="/user" component={BoardUser} />
             <Route path="/mod" component={BoardModerator} />
             <Route path="/admin" component={BoardAdmin} />
+            <Route path="/Proba" component={Proba} />
+            <Route path="/Autok" component={Autok} />
           </Switch>
         </div>
       </div>
